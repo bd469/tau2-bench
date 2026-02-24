@@ -1,0 +1,579 @@
+{
+  "id": "5aea72f4-301c-43d3-8aff-0adf72a00a4b",
+  "task_id": "33",
+  "timestamp": "2026-02-19T19:39:44.403456",
+  "start_time": "2026-02-19T19:14:19.568201",
+  "end_time": "2026-02-19T19:39:44.403410",
+  "duration": 1524.8341528330348,
+  "termination_reason": "user_stop",
+  "agent_cost": null,
+  "user_cost": null,
+  "reward_info": null,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Hi! How can I help you today?",
+      "tool_calls": null,
+      "turn_idx": 0,
+      "timestamp": "2026-02-19T19:14:19.569318",
+      "cost": 0.0,
+      "usage": null,
+      "raw_data": null
+    },
+    {
+      "role": "user",
+      "content": "Hi! I’d like to make some changes to my upcoming reservation, please.",
+      "tool_calls": null,
+      "turn_idx": 1,
+      "timestamp": "2026-02-19T19:14:21.201594",
+      "cost": 0.001266,
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 569
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Hi! I’d like to make some changes to my upcoming reservation, please.",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "please give me your user id and reservation id",
+      "tool_calls": null,
+      "turn_idx": 2,
+      "timestamp": "2026-02-19T19:26:34.357120",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "please give me your user id and reservation id"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Sure, my user ID is yara_garcia_1905 and my reservation ID is HXDUBJ.",
+      "tool_calls": null,
+      "turn_idx": 3,
+      "timestamp": "2026-02-19T19:26:35.630376",
+      "cost": 0.001388,
+      "usage": {
+        "completion_tokens": 23,
+        "prompt_tokens": 602
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Sure, my user ID is yara_garcia_1905 and my reservation ID is HXDUBJ.",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "HXDUBJ"
+          },
+          "requestor": "assistant"
+        }
+      ],
+      "turn_idx": 4,
+      "timestamp": "2026-02-19T19:26:49.618283",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "get_reservation_details(reservation_id='HXDUBJ')"
+      }
+    },
+    {
+      "id": "",
+      "role": "tool",
+      "content": "{\"reservation_id\": \"HXDUBJ\", \"user_id\": \"yara_garcia_1905\", \"origin\": \"IAH\", \"destination\": \"SFO\", \"flight_type\": \"round_trip\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT085\", \"origin\": \"IAH\", \"destination\": \"JFK\", \"date\": \"2024-05-18\", \"price\": 177}, {\"flight_number\": \"HAT023\", \"origin\": \"JFK\", \"destination\": \"SFO\", \"date\": \"2024-05-18\", \"price\": 146}, {\"flight_number\": \"HAT278\", \"origin\": \"SFO\", \"destination\": \"IAH\", \"date\": \"2024-05-22\", \"price\": 180}], \"passengers\": [{\"first_name\": \"Yara\", \"last_name\": \"Garcia\", \"dob\": \"1974-08-15\"}], \"payment_history\": [{\"payment_id\": \"gift_card_6941833\", \"amount\": 533}], \"created_at\": \"2024-05-04T06:04:48\", \"total_baggages\": 0, \"nonfree_baggages\": 0, \"insurance\": \"yes\", \"status\": null}",
+      "requestor": "assistant",
+      "error": false,
+      "turn_idx": 5,
+      "timestamp": "2026-02-19T19:26:49.619253"
+    },
+    {
+      "role": "assistant",
+      "content": "what do you wnt to change",
+      "tool_calls": null,
+      "turn_idx": 6,
+      "timestamp": "2026-02-19T19:27:12.805588",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "what do you wnt to change"
+      }
+    },
+    {
+      "role": "user",
+      "content": "I’d like to change my outgoing flight to a nonstop flight that departs the next day instead—so basically delay it by one day. Also, I want to move my return flight from SFO back by one day as well. Both flights should depart after 8am and before 9pm.",
+      "tool_calls": null,
+      "turn_idx": 7,
+      "timestamp": "2026-02-19T19:27:14.653361",
+      "cost": 0.0017679999999999998,
+      "usage": {
+        "completion_tokens": 61,
+        "prompt_tokens": 640
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "I’d like to change my outgoing flight to a nonstop flight that departs the next day instead—so basically delay it by one day. Also, I want to move my return flight from SFO back by one day as well. Both flights should depart after 8am and before 9pm.",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "IAH",
+            "destination": "SFO",
+            "date": "2024-05-19"
+          },
+          "requestor": "assistant"
+        }
+      ],
+      "turn_idx": 8,
+      "timestamp": "2026-02-19T19:27:52.821801",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "search_direct_flight(origin='IAH', destination='SFO', date='2024-05-19')"
+      }
+    },
+    {
+      "id": "",
+      "role": "tool",
+      "content": "[{\"flight_number\": \"HAT072\", \"origin\": \"IAH\", \"destination\": \"SFO\", \"status\": \"available\", \"scheduled_departure_time_est\": \"09:00:00\", \"scheduled_arrival_time_est\": \"13:00:00\", \"date\": null, \"available_seats\": {\"basic_economy\": 18, \"economy\": 9, \"business\": 9}, \"prices\": {\"basic_economy\": 68, \"economy\": 130, \"business\": 282}}, {\"flight_number\": \"HAT180\", \"origin\": \"IAH\", \"destination\": \"SFO\", \"status\": \"available\", \"scheduled_departure_time_est\": \"07:00:00\", \"scheduled_arrival_time_est\": \"11:00:00\", \"date\": null, \"available_seats\": {\"basic_economy\": 4, \"economy\": 17, \"business\": 15}, \"prices\": {\"basic_economy\": 65, \"economy\": 130, \"business\": 346}}]",
+      "requestor": "assistant",
+      "error": false,
+      "turn_idx": 9,
+      "timestamp": "2026-02-19T19:27:52.825266"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "SFO",
+            "destination": "IAH",
+            "date": "2024-05-21"
+          },
+          "requestor": "assistant"
+        }
+      ],
+      "turn_idx": 10,
+      "timestamp": "2026-02-19T19:28:11.073442",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "search_direct_flight(origin='SFO', destination='IAH', date='2024-05-21')"
+      }
+    },
+    {
+      "id": "",
+      "role": "tool",
+      "content": "[{\"flight_number\": \"HAT082\", \"origin\": \"SFO\", \"destination\": \"IAH\", \"status\": \"available\", \"scheduled_departure_time_est\": \"23:00:00\", \"scheduled_arrival_time_est\": \"03:00:00+1\", \"date\": null, \"available_seats\": {\"basic_economy\": 18, \"economy\": 13, \"business\": 1}, \"prices\": {\"basic_economy\": 68, \"economy\": 192, \"business\": 470}}, {\"flight_number\": \"HAT278\", \"origin\": \"SFO\", \"destination\": \"IAH\", \"status\": \"available\", \"scheduled_departure_time_est\": \"16:00:00\", \"scheduled_arrival_time_est\": \"20:00:00\", \"date\": null, \"available_seats\": {\"basic_economy\": 18, \"economy\": 8, \"business\": 12}, \"prices\": {\"basic_economy\": 66, \"economy\": 174, \"business\": 257}}]",
+      "requestor": "assistant",
+      "error": false,
+      "turn_idx": 11,
+      "timestamp": "2026-02-19T19:28:11.076645"
+    },
+    {
+      "role": "assistant",
+      "content": "HAT072\" in 2024-05-19\" ecnomics \"09:00:00\", \"scheduled_arrival_time_est\": \"13:00:00\"130 dollars.\"scheduled_departure_time_est\": \"16:00:00\"scheduled_arrival_time_est\": \"20:00:00\"\"economy\": 174 dollars.",
+      "tool_calls": null,
+      "turn_idx": 12,
+      "timestamp": "2026-02-19T19:29:28.800030",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "HAT072\" in 2024-05-19\" ecnomics \"09:00:00\", \"scheduled_arrival_time_est\": \"13:00:00\"130 dollars.\"scheduled_departure_time_est\": \"16:00:00\"scheduled_arrival_time_est\": \"20:00:00\"\"economy\": 174 dollars."
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thanks for the options! Just to confirm, are these both nonstop flights? And are these the only options available for the new dates within my preferred time window?",
+      "tool_calls": null,
+      "turn_idx": 13,
+      "timestamp": "2026-02-19T19:29:29.934117",
+      "cost": 0.0018199999999999998,
+      "usage": {
+        "completion_tokens": 32,
+        "prompt_tokens": 782
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Thanks for the options! Just to confirm, are these both nonstop flights? And are these the only options available for the new dates within my preferred time window?",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "yes non stop flights and in your preffered time window",
+      "tool_calls": null,
+      "turn_idx": 14,
+      "timestamp": "2026-02-19T19:30:30.562816",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "yes non stop flights and in your preffered time window"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Great, I’d like to go ahead and change both flights to these nonstop options. Can you let me know if there are any fees for making these changes? I have insurance, so I believe any change fees should be waived according to your website policy.",
+      "tool_calls": null,
+      "turn_idx": 15,
+      "timestamp": "2026-02-19T19:30:32.338014",
+      "cost": 0.002076,
+      "usage": {
+        "completion_tokens": 51,
+        "prompt_tokens": 834
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Great, I’d like to go ahead and change both flights to these nonstop options. Can you let me know if there are any fees for making these changes? I have insurance, so I believe any change fees should be waived according to your website policy.",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i think cancellation is coered by insurance. the adjusted flights is 130+174 dollars , it will give you refund of $533 - ( 130+174) dollars to gift_card_6941833",
+      "tool_calls": null,
+      "turn_idx": 16,
+      "timestamp": "2026-02-19T19:33:13.870864",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "i think cancellation is coered by insurance. the adjusted flights is 130+174 dollars , it will give you refund of $533 - ( 130+174) dollars to gift_card_6941833"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Actually, my understanding from your website is that insurance also covers change fees, not just cancellations. I’d like to have any change fees waived, please. Can you check with a supervisor or review the policy? I want to make sure I’m not being charged extra for making these changes since I have insurance.",
+      "tool_calls": null,
+      "turn_idx": 17,
+      "timestamp": "2026-02-19T19:33:15.282608",
+      "cost": 0.002366,
+      "usage": {
+        "completion_tokens": 62,
+        "prompt_tokens": 935
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Actually, my understanding from your website is that insurance also covers change fees, not just cancellations. I’d like to have any change fees waived, please. Can you check with a supervisor or review the policy? I want to make sure I’m not being charged extra for making these changes since I have insurance.",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "you'll get refund instead of any payment",
+      "tool_calls": null,
+      "turn_idx": 18,
+      "timestamp": "2026-02-19T19:33:36.419838",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "you'll get refund instead of any payment"
+      }
+    },
+    {
+      "role": "user",
+      "content": "That sounds good, thank you for clarifying! Please go ahead and process the changes to the nonstop flights as discussed.\n\nAlso, now that we’re making these changes, I’d like to upgrade my ticket to business class and add 2 checked bags for both legs. I’m willing to pay up to $200 for these upgrades. Can you let me know if that’s possible?",
+      "tool_calls": null,
+      "turn_idx": 19,
+      "timestamp": "2026-02-19T19:33:38.520630",
+      "cost": 0.0026420000000000003,
+      "usage": {
+        "completion_tokens": 77,
+        "prompt_tokens": 1013
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "That sounds good, thank you for clarifying! Please go ahead and process the changes to the nonstop flights as discussed.\n\nAlso, now that we’re making these changes, I’d like to upgrade my ticket to business class and add 2 checked bags for both legs. I’m willing to pay up to $200 for these upgrades. Can you let me know if that’s possible?",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "we does not allow change to business class for only one leg of the flight.",
+      "tool_calls": null,
+      "turn_idx": 20,
+      "timestamp": "2026-02-19T19:34:02.070464",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "we does not allow change to business class for only one leg of the flight."
+      }
+    },
+    {
+      "role": "user",
+      "content": "Understood. If upgrading both legs to business class and adding 2 checked bags is within my $200 budget, please proceed with that. If it’s more than $200, I’m okay with keeping economy for both flights, but I still want to add 2 checked bags. Can you let me know the total cost for adding the bags in that case? I’ll use my original form of payment.",
+      "tool_calls": null,
+      "turn_idx": 21,
+      "timestamp": "2026-02-19T19:34:04.958373",
+      "cost": 0.002884,
+      "usage": {
+        "completion_tokens": 82,
+        "prompt_tokens": 1114
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Understood. If upgrading both legs to business class and adding 2 checked bags is within my $200 budget, please proceed with that. If it’s more than $200, I’m okay with keeping economy for both flights, but I still want to add 2 checked bags. Can you let me know the total cost for adding the bags in that case? I’ll use my original form of payment.",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "it sis more than 200$ but i can add 2 nonfree bags",
+      "tool_calls": null,
+      "turn_idx": 22,
+      "timestamp": "2026-02-19T19:36:31.366750",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "it sis more than 200$ but i can add 2 nonfree bags"
+      }
+    },
+    {
+      "role": "user",
+      "content": "That’s fine—please add 2 checked bags to both flights in economy. Go ahead and charge the original form of payment for the bag fees. Let me know once that’s done or if you need anything else from me.",
+      "tool_calls": null,
+      "turn_idx": 23,
+      "timestamp": "2026-02-19T19:36:32.606063",
+      "cost": 0.00108,
+      "usage": {
+        "completion_tokens": 46,
+        "prompt_tokens": 1220
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "That’s fine—please add 2 checked bags to both flights in economy. Go ahead and charge the original form of payment for the bag fees. Let me know once that’s done or if you need anything else from me.",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "HXDUBJ",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT072",
+                "date": "2024-05-19"
+              },
+              {
+                "flight_number": "HAT278",
+                "date": "2024-05-23"
+              }
+            ],
+            "payment_id": "gift_card_6941833"
+          },
+          "requestor": "assistant"
+        }
+      ],
+      "turn_idx": 24,
+      "timestamp": "2026-02-19T19:38:46.045183",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "update_reservation_flights(reservation_id='HXDUBJ', cabin='economy', flights=[{'flight_number': 'HAT072', 'date': '2024-05-19'}, {'flight_number': 'HAT278', 'date': '2024-05-23'}], payment_id='gift_card_6941833')"
+      }
+    },
+    {
+      "id": "",
+      "role": "tool",
+      "content": "{\"reservation_id\": \"HXDUBJ\", \"user_id\": \"yara_garcia_1905\", \"origin\": \"IAH\", \"destination\": \"SFO\", \"flight_type\": \"round_trip\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT072\", \"origin\": \"IAH\", \"destination\": \"SFO\", \"date\": \"2024-05-19\", \"price\": 130}, {\"flight_number\": \"HAT278\", \"origin\": \"SFO\", \"destination\": \"IAH\", \"date\": \"2024-05-23\", \"price\": 187}], \"passengers\": [{\"first_name\": \"Yara\", \"last_name\": \"Garcia\", \"dob\": \"1974-08-15\"}], \"payment_history\": [{\"payment_id\": \"gift_card_6941833\", \"amount\": 533}, {\"payment_id\": \"gift_card_6941833\", \"amount\": -186}], \"created_at\": \"2024-05-04T06:04:48\", \"total_baggages\": 0, \"nonfree_baggages\": 0, \"insurance\": \"yes\", \"status\": null}",
+      "requestor": "assistant",
+      "error": false,
+      "turn_idx": 25,
+      "timestamp": "2026-02-19T19:38:46.048419"
+    },
+    {
+      "role": "assistant",
+      "content": "Refund: $186 (gift_card_6941833)",
+      "tool_calls": null,
+      "turn_idx": 26,
+      "timestamp": "2026-02-19T19:38:52.883050",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "Refund: $186 (gift_card_6941833)"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thank you for confirming! So just to recap, my flights have been changed to the new nonstop options, and I have 2 checked bags added to both legs. The refund of $186 will go to my gift card. That works for me.\n\nIs there anything else I need to do on my end?",
+      "tool_calls": null,
+      "turn_idx": 27,
+      "timestamp": "2026-02-19T19:38:54.944306",
+      "cost": 0.00134,
+      "usage": {
+        "completion_tokens": 62,
+        "prompt_tokens": 1286
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Thank you for confirming! So just to recap, my flights have been changed to the new nonstop options, and I have 2 checked bags added to both legs. The refund of $186 will go to my gift card. That works for me.\n\nIs there anything else I need to do on my end?",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "",
+          "name": "update_reservation_baggages",
+          "arguments": {
+            "reservation_id": "HXDUBJ",
+            "total_baggages": 2,
+            "nonfree_baggages": 2,
+            "payment_id": "gift_card_6941833"
+          },
+          "requestor": "assistant"
+        }
+      ],
+      "turn_idx": 28,
+      "timestamp": "2026-02-19T19:39:22.087587",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "update_reservation_baggages(reservation_id='HXDUBJ', total_baggages=2, nonfree_baggages=2, payment_id='gift_card_6941833')"
+      }
+    },
+    {
+      "id": "",
+      "role": "tool",
+      "content": "{\"reservation_id\": \"HXDUBJ\", \"user_id\": \"yara_garcia_1905\", \"origin\": \"IAH\", \"destination\": \"SFO\", \"flight_type\": \"round_trip\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT072\", \"origin\": \"IAH\", \"destination\": \"SFO\", \"date\": \"2024-05-19\", \"price\": 130}, {\"flight_number\": \"HAT278\", \"origin\": \"SFO\", \"destination\": \"IAH\", \"date\": \"2024-05-23\", \"price\": 187}], \"passengers\": [{\"first_name\": \"Yara\", \"last_name\": \"Garcia\", \"dob\": \"1974-08-15\"}], \"payment_history\": [{\"payment_id\": \"gift_card_6941833\", \"amount\": 533}, {\"payment_id\": \"gift_card_6941833\", \"amount\": -186}, {\"payment_id\": \"gift_card_6941833\", \"amount\": 100}], \"created_at\": \"2024-05-04T06:04:48\", \"total_baggages\": 2, \"nonfree_baggages\": 2, \"insurance\": \"yes\", \"status\": null}",
+      "requestor": "assistant",
+      "error": false,
+      "turn_idx": 29,
+      "timestamp": "2026-02-19T19:39:22.090228"
+    },
+    {
+      "role": "assistant",
+      "content": "I updated the 2 bags costs  $100 (gift_card_6941833)   so you eventually get refund of 86$",
+      "tool_calls": null,
+      "turn_idx": 30,
+      "timestamp": "2026-02-19T19:39:43.363484",
+      "cost": null,
+      "usage": null,
+      "raw_data": {
+        "action": "I updated the 2 bags costs  $100 (gift_card_6941833)   so you eventually get refund of 86$"
+      }
+    },
+    {
+      "role": "user",
+      "content": "Perfect, thank you for the update! I appreciate your help with all these changes. Everything looks good to me now.\n\nThanks again! Have a great day. \n\n###STOP###",
+      "tool_calls": null,
+      "turn_idx": 31,
+      "timestamp": "2026-02-19T19:39:44.401154",
+      "cost": 0.0011359999999999999,
+      "usage": {
+        "completion_tokens": 36,
+        "prompt_tokens": 1384
+      },
+      "raw_data": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "Perfect, thank you for the update! I appreciate your help with all these changes. Everything looks good to me now.\n\nThanks again! Have a great day. \n\n###STOP###",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "annotations": []
+        },
+        "provider_specific_fields": {}
+      }
+    }
+  ],
+  "trial": null,
+  "seed": null
+}
